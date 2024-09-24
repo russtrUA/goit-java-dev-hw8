@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'ua.goit'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.7.4'
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    implementation 'org.flywaydb:flyway-core:10.18.0'
+    runtimeOnly 'org.flywaydb:flyway-database-postgresql:10.18.0'
+}
+
+test {
+    useJUnitPlatform()
+}
